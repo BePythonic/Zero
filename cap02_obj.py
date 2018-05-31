@@ -63,7 +63,7 @@ def graf_palavras(palavras, qtde_palavras, t):
 
 def main():
     t = "Senhor dos Anéis"
-    arq = FileAux("lotr.txt")
+    arq = FileAux("txt/lotr.txt")
     qtde_letras = 0
     palavras = {}
     letras = {}

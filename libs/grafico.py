@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 # @author Eduardo
+from matplotlib.font_manager import FontProperties
 import matplotlib.pyplot
 
 class Grafico:
@@ -12,6 +13,7 @@ class Grafico:
         self.titulo = ""
         self.eixo_x = ""
         self.eixo_y = ""
+        self.font = FontProperties()
         self.setTamanho()
 
     def setOpcoes(self):
@@ -35,8 +37,8 @@ class Grafico:
         Gráfico XY de vários conjuntos imagem em Y
         onde tem que pertencer ao mesmo domínio X
         '''
-        for y, estilo in Y:
-            self.p.plot(X, y, estilo)
+        for y, estilo, lbl in Y:
+            self.p.plot(X, y, estilo, label=lbl)
             
     def show(self):
         '''(Grafico) -> None
